@@ -52,7 +52,7 @@ app.get("/customer/:id/transfer", wrapAsync(async(req, res, next) => {
         throw new AppError("User Not Found", 401);
     }
     res.render("transfer", { cus, cs });
-}));
+}));            
 
 app.get("/customer/:id/history", wrapAsync(async(req, res, next) => {
     const { id } = req.params;
